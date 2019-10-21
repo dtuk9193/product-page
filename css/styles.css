@@ -1,0 +1,254 @@
+body {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(233, 233, 245, 0);
+}
+.content {
+    height:100%;
+    width:80%;
+    margin-left:15%;
+    position: absolute;
+    background-color: #ebeff7;
+}
+.filter-content {
+    width: 22%;
+    height: 100%;
+    position: absolute;
+}
+.product-content {
+    height: 100%;
+    width: 70%;
+    position: absolute;
+    margin-left: 24%;
+    background-color: yellow;
+
+}
+.filter-content >div {
+    width:80% ;
+    position: relative;
+    margin: 4% 10%;
+    border-radius: 3px;
+    box-shadow: 4px 5px 5px 0 rgba(68, 97, 165, 0.74);
+    background-color: #fbfcff;
+}
+.filter-content .styles {
+    margin-top:50px;
+}
+.filter-content span {
+    padding-left: 6%;
+    font-size: small;
+    font-family: monospace;
+}
+.img-content input[type=checkbox] {
+    width: 22px;
+    height: 22px;
+    border-radius: 2px;
+    border: solid 1px #aaabbc;
+    background-color: #ffffff;
+    bottom: 29%;
+    left: 12%;
+    position: absolute;
+}
+input[type="checkbox"]:checked {
+    background: rgb(10, 14, 22);
+	content: '\2714';
+	color: #fff;
+ }
+.title-text {
+    padding:4% 5% 4%;
+    font-weight: bold;
+}
+.filter-content .title-text i{
+    float: right;
+}
+.filter-content button {
+    margin-left:4%;
+    width: 90%;
+    border-radius: 3px;
+    box-shadow: 0 2px 6px 0 rgba(19, 33, 66, 0.07);
+    background-color: #636471;
+    color:white;
+    font-weight: 300;
+    font-family: -webkit-body;
+    bottom: 5px;
+    position: relative;
+}
+.title-text i {
+    font-size: large;
+    margin-right: 4%;
+}
+.img-content {
+    padding: 2%;
+    overflow: hidden;
+    height: 300px;
+}
+.img-content div{
+    width: 48%;
+    float: left;
+    position: relative;
+}
+#priceRangetoggle {
+    height: 100px;
+}
+#reviewstoggle {
+    height: 40px;
+}
+.style-img {
+    width: 100%;
+}
+.min-max input[type=text] {
+    width:17%;
+    border-radius: 3px;
+    background-color: #97a09d4f;
+    border-style: none;
+    border-bottom-style: outset;
+}
+p {
+    margin: 5% 5%;
+    font-weight: bold;
+    font-size: small;
+}
+.min-max p input[type=button] {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.29;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 3px;
+    box-shadow: 0 2px 8px 0 rgba(19, 33, 66, 0.07);
+    background-color: #404246;
+    float: right;
+    margin-right: 5%;
+}
+.horizontal-line {
+    margin-left:4%;
+    width: 90%;
+    height: 1px;
+    border-radius: 3px;
+    background-color: #dddee9;
+}
+.color-num {
+    float: right;
+    margin-right: 5%;
+}
+.rate {
+    height: 46px;
+    padding: 0 10px;
+    margin-left: 2%;
+    width:100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:left;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:24px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+/* slider */
+.slider {
+    pointer-events: none;
+    margin-left: 5%;
+    cursor: pointer;  
+    padding-left: 30%;
+    padding-right: 30%; 
+    background-color: #b2c3c0;
+    box-sizing: border-box;
+  }
+  
+  .slider.focusable {
+    border: 1px solid #222
+  }
+  
+  .thumb {
+    cursor: pointer;
+    top: -9px;
+    background-color: #0f4534;
+    background-color: rgba(100, 100, 100, 1);
+    border-radius: 50%;
+    position: absolute;
+  }
+  
+  .track {
+    pointer-events: none;
+    height: 100%;
+    background-color:#17694f;
+  }
+  .slider-container {
+    position: relative;
+    margin-top: 27px;
+    height: 2%;
+    width: 80%;
+    margin-left: 4%;
+  }
+  .output {
+    pointer-events: none;
+    margin: 0;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50% 50% 0 50%;
+    background-color: #4ac4ac;
+    text-align: center;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: -45px;
+    /*left:45px*/
+    
+    ;
+  }
+  
+  .output p {
+    pointer-events: none;
+    font-size: 14px;
+    color: #0a1a17;
+    text-align: center;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  .product-header {
+      margin-top:50px;
+  }
+  .product-header h3 {
+      display:inline;
+  }
+  .product-header p {
+    display:inline;
+    margin-left:2%;
+    color: #0808089c;
+}
